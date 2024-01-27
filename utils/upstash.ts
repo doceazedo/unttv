@@ -17,8 +17,8 @@ const getTruePath = (path: string) => path.split("?")[0];
 
 export const cache = async (path: string, body: unknown, seconds = 300) => {
   const key = `cache:${getTruePath(path)}`;
-  redis.set(key, JSON.stringify(body));
-  redis.expire(key, seconds);
+  await redis.set(key, JSON.stringify(body));
+  await redis.expire(key, seconds);
 };
 
 export const getCachedResult = async (path: string) =>
