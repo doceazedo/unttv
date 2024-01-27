@@ -9,6 +9,7 @@
   "dependencies": {
     "@twurple/api": "^7.0.8",
     "@twurple/auth": "^7.0.8",
+    "@upstash/ratelimit": "^1.0.0",
     "@upstash/redis": "^1.28.2",
     "dotenv": "^16.4.1",
     "nitropack": "latest"
