@@ -8,11 +8,13 @@ Accessing the Twitch API should be fast, easy and straightforward. Helix require
 
 UNTTV provides a simplified, cached, and anonymous layer to make the Twitch API more enjoyable!
 
+The name and concept is inspired by [UNGH](https://github.com/unjs/ungh).
+
 ## How it works?
 
 We use an auto-refreshing token so you can use this UNTTV anywhere. To prevent getting rate limited by Twitch we — ironically — have a limit of **50 requests per minute** per IP.
 
-We also cache results on Upstash to avoid beating the Twitch API too much and to provide quick responses. By default, results are **cached for 5 minutes**. You can check if the response have a `X-Cached` header to know if it is cached.
+We also cache results on Upstash to avoid beating the Twitch API too much and to provide quick responses. By default, results are **cached for 5 minutes**. Cached responses don't count towards your limit. You can find out if a response is cached by checking if it has a `X-Cached` header.
 
 ## Who's using it?
 
@@ -30,7 +32,7 @@ Note that UNTTV endpoints don't necessarily match to Twitch's API.
 
 Current stream with most viewers
 
-**Example:** https://unttv.cc/streams/top-viewers-stream
+**Example:** https://unttv.vercel.app/streams/top-viewers-stream
 
 ```json
 {
@@ -55,7 +57,7 @@ Current stream with most viewers
 
 List of chat badges of a broadcaster's channel
 
-**Example:** https://unttv.cc/badges/channel/98776633
+**Example:** https://unttv.vercel.app/badges/channel/98776633
 
 ```json
 [
@@ -78,7 +80,7 @@ List of chat badges of a broadcaster's channel
 
 List of global chat badges, that can be used in any chat
 
-**Example:** https://unttv.cc/badges/global
+**Example:** https://unttv.vercel.app/badges/global
 
 ```json
 [
@@ -96,3 +98,7 @@ List of global chat badges, that can be used in any chat
   }
 ]
 ```
+
+## License
+
+The UNTTV project is licensed under the [GPLv3 License](./LICENSE).
