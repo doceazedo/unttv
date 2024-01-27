@@ -1,8 +1,8 @@
-export default eventHandler(async () => {
+export default eventHandler(async ({ path }) => {
   const streams = await twurple.streams.getStreams();
   if (!streams.data) return null;
   const stream = streams.data[0];
-  return {
+  const body = {
     gameId: stream.gameId,
     gameName: stream.gameName,
     id: stream.id,
@@ -18,4 +18,6 @@ export default eventHandler(async () => {
     userName: stream.userName,
     viewers: stream.viewers,
   };
+  await cache(path, body);
+  return body;
 });

@@ -1,4 +1,6 @@
-export default eventHandler(async ({ context }) => {
+export default eventHandler(async ({ context, path }) => {
   const badges = await twurple.chat.getChannelBadges(context.params.channelId);
-  return formatBadgesResponse(badges);
+  const body = formatBadgesResponse(badges);
+  await cache(path, body);
+  return body;
 });

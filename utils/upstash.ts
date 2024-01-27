@@ -12,3 +12,14 @@ export const ratelimit = new Ratelimit({
   limiter: Ratelimit.slidingWindow(50, "1m"),
   analytics: true,
 });
+
+const getTruePath = (path: string) => path.split("?")[0];
+
+export const cache = async (path: string, body: unknown, seconds = 300) => {
+  const key = `cache:${getTruePath(path)}`;
+  redis.set(key, JSON.stringify(body));
+  redis.expire(key, seconds);
+};
+
+export const getCachedResult = async (path: string) =>
+  (await redis.get(`cache:${getTruePath(path)}`)) as Object | Array<unknown>;
