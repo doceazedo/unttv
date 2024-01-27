@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "nitropack prepare",
+    "dev": "nitropack dev",
+    "build": "nitropack build",
+    "preview": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@twurple/api": "^7.0.8",
+    "@twurple/auth": "^7.0.8",
+    "@upstash/redis": "^1.28.2",
+    "dotenv": "^16.4.1",
+    "nitropack": "latest"
+  }
+}
