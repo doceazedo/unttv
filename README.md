@@ -8,13 +8,11 @@ Accessing the Twitch API should be fast, easy and straightforward. Helix require
 
 UNTTV provides a simplified, cached, and anonymous layer to make the Twitch API more enjoyable!
 
-The name and concept is inspired by [UNGH](https://github.com/unjs/ungh).
-
 ## How it works?
 
-We use an auto-refreshing token so you can use this UNTTV anywhere. To prevent getting rate limited by Twitch we — ironically — have a limit of **50 requests per minute** per IP.
+We use an auto-refreshing token, so you can use this UNTTV from any location. To avoid hitting Twitch's rate limits, we have a limit of **100 requests per minute** per IP.
 
-We also cache results on Upstash to avoid beating the Twitch API too much and to provide quick responses. By default, results are **cached for 5 minutes**. Cached responses don't count towards your limit. You can find out if a response is cached by checking if it has a `X-Cached` header.
+We also cache results to reduce load on the Twitch API and provide faster responses. By default, results are **cached for 5 minutes**. Cached responses don't count towards your rate limit. To determine if a response is cached, check for the presence of an "X-Cached" header.
 
 ## Who's using it?
 
@@ -65,11 +63,14 @@ List of chat badges of a broadcaster's channel
     "id": "subscriber",
     "versions": [
       {
+        "id": "0",
+        "title": "Subscriber",
+        "description": "Subscriber",
         "clickAction": "subscribe_to_channel",
         "clickUrl": null,
-        "description": "Subscriber",
-        "id": "0",
-        "title": "Subscriber"
+        "image_url_1x": "https://static-cdn.jtvnw.net/badges/v1/92bfc11b-4cd2-4078-971d-6b5c5e73247b/1",
+        "image_url_2x": "https://static-cdn.jtvnw.net/badges/v1/92bfc11b-4cd2-4078-971d-6b5c5e73247b/2",
+        "image_url_4x": "https://static-cdn.jtvnw.net/badges/v1/92bfc11b-4cd2-4078-971d-6b5c5e73247b/3"
       }
     ]
   }
@@ -88,11 +89,14 @@ List of global chat badges, that can be used in any chat
     "id": "broadcaster",
     "versions": [
       {
+        "id": "1",
+        "title": "Broadcaster",
+        "description": "Broadcaster",
         "clickAction": null,
         "clickUrl": null,
-        "description": "Broadcaster",
-        "id": "1",
-        "title": "Broadcaster"
+        "image_url_1x": "https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/1",
+        "image_url_2x": "https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/2",
+        "image_url_4x": "https://static-cdn.jtvnw.net/badges/v1/5527c58c-fb7d-422d-b71b-f309dcb85cc1/3"
       }
     ]
   }
