@@ -14,3 +14,14 @@ export const formatBadgesResponse = (badges: HelixChatBadgeSet[]) =>
       image_url_4x: version.getImageUrl(4),
     })),
   }));
+
+const EMPTY_RESPONSE = new Response(JSON.stringify(null), {
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+export const cachedEmptyResponse = async (path: string) => {
+  cache(path, "", 60);
+  return EMPTY_RESPONSE;
+};

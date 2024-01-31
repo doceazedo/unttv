@@ -22,4 +22,7 @@ export const cache = async (path: string, body: unknown, seconds = 300) => {
 };
 
 export const getCachedResult = async (path: string) =>
-  (await redis.get(`cache:${getTruePath(path)}`)) as Object | Array<unknown>;
+  (await redis.get(`cache:${getTruePath(path)}`)) as
+    | string
+    | Object
+    | Array<unknown>;

@@ -12,7 +12,7 @@ UNTTV provides a simplified, cached, and anonymous layer to make the Twitch API 
 
 We use an auto-refreshing token, so you can use this UNTTV from any location. To avoid hitting Twitch's rate limits, we have a limit of **100 requests per minute** per IP.
 
-We also cache results to reduce load on the Twitch API and provide faster responses. By default, results are **cached for 5 minutes**. Cached responses don't count towards your rate limit. To determine if a response is cached, check for the presence of an "X-Cached" header.
+We also cache results to reduce load on the Twitch API and provide faster responses. By default, results are **cached for 5 minutes** and empty results for 1 minute. Cached responses don't count towards your rate limit. To determine if a response is cached, check for the presence of an `X-Cached` header.
 
 ## Who's using it?
 
@@ -48,6 +48,31 @@ Current stream with most viewers
   "userId": "411377640",
   "userName": "jynxzi",
   "viewers": 60153
+}
+```
+
+### `/streams/[channelIdOrName]`
+
+Current stream of a channel
+
+**Example:** https://unttv.vercel.app/streams/nocopyrightsounds
+
+```json
+{
+  "gameId": "26936",
+  "gameName": "Music",
+  "id": "40389108677",
+  "isMature": false,
+  "language": "en",
+  "startDate": "2024-01-30T07:38:15.000Z",
+  "tags": ["English"],
+  "thumbnailUrl": "https://static-cdn.jtvnw.net/previews-ttv/live_user_nocopyrightsounds-{width}x{height}.jpg",
+  "title": "NCS - Copyright Free Music Livestream 🎵 EDM, Gaming, Trap, House, Dubstep",
+  "type": "live",
+  "userDisplayName": "NoCopyrightSounds",
+  "userId": "46375210",
+  "userName": "nocopyrightsounds",
+  "viewers": 41
 }
 ```
 

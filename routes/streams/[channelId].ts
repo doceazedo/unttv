@@ -1,6 +1,21 @@
-export default eventHandler(async ({ path }) => {
-  const streams = await twurple.streams.getStreams();
+export default eventHandler(async ({ context, path }) => {
+  const { channelId } = context.params;
+
+  let userId: string;
+  let userName: string;
+
+  if (isNaN(parseInt(channelId))) {
+    userName = channelId;
+  } else {
+    userId = channelId;
+  }
+
+  const streams = await twurple.streams.getStreams({
+    userId,
+    userName,
+  });
   if (!streams.data.length) return cachedEmptyResponse(path);
+
   const stream = streams.data[0];
   const body = {
     gameId: stream.gameId,
@@ -18,6 +33,7 @@ export default eventHandler(async ({ path }) => {
     userName: stream.userName,
     viewers: stream.viewers,
   };
+
   await cache(path, body);
   return body;
 });
