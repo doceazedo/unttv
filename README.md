@@ -128,6 +128,37 @@ List of global chat badges, that can be used in any chat
 ]
 ```
 
+### `/videos/channel/[channelId]`
+
+List of videos (VODs) of a channel
+
+**Example:** https://unttv.vercel.app/videos/channel/98776633
+
+```json
+[
+  {
+    "id": "2048456880",
+    "userId": "98776633",
+    "userName": "doceazedo911",
+    "userDisplayName": "DoceAzedo911",
+    "title": "🏳️‍🌈🏳️‍⚧️ • Common Lisp, R & Ruby • Raindrops ☔ • Semana 3/48 Exercism #48in24 • !cmd !hoje",
+    "description": "",
+    "creationDate": "2024-01-30T22:30:37.000Z",
+    "publishDate": "2024-01-30T22:30:37.000Z",
+    "url": "https://www.twitch.tv/videos/2048456880",
+    "thumbnailUrl": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/1275737c65a14f473103_doceazedo911_42267807049_1706653832//thumb/thumb0-%{width}x%{height}.jpg",
+    "isPublic": true,
+    "views": 106,
+    "language": "pt",
+    "type": "archive",
+    "duration": "1h58m0s",
+    "durationInSeconds": 7080,
+    "streamId": "42267807049",
+    "mutedSegmentData": []
+  }
+]
+```
+
 ## License
 
 The UNTTV project is licensed under the [GPLv3 License](./LICENSE).
