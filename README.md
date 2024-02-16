@@ -159,6 +159,25 @@ List of videos (VODs) of a channel
 ]
 ```
 
+### `/oauth2/token/[code]`
+
+Retrieve access token and refresh token for an authorization code
+
+**Example:** https://unttv.vercel.app/oauth2/token/dac9630aec642a428cd73f4be0a03569
+
+> [!NOTE]
+> Your authorization flow must use the Client ID `bu3ulf6jfnimlrdinskr5nqkbh8uz7` so we can exchange the tokens.
+
+```json
+{
+  "access_token": "rfx2uswqe8l4g1mkagrvg5tv0ks3",
+  "expires_in": 14124,
+  "refresh_token": "5b93chm6hdve3mycz05zfzatkfdenfspp1h1ar2xxdalen01",
+  "scope": ["channel:moderate", "chat:edit", "chat:read"],
+  "token_type": "bearer"
+}
+```
+
 ## License
 
 The UNTTV project is licensed under the [GPLv3 License](./LICENSE).
