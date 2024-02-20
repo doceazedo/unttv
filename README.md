@@ -161,7 +161,7 @@ List of videos (VODs) of a channel
 
 ### `/oauth2/token/[code]`
 
-Retrieve access token and refresh token for an authorization code
+Retrieve access token, refresh token and user data for an authorization code
 
 **Example:** https://unttv.vercel.app/oauth2/token/dac9630aec642a428cd73f4be0a03569
 
@@ -170,11 +170,25 @@ Retrieve access token and refresh token for an authorization code
 
 ```json
 {
-  "access_token": "rfx2uswqe8l4g1mkagrvg5tv0ks3",
-  "expires_in": 14124,
-  "refresh_token": "5b93chm6hdve3mycz05zfzatkfdenfspp1h1ar2xxdalen01",
-  "scope": ["channel:moderate", "chat:edit", "chat:read"],
-  "token_type": "bearer"
+  "token": {
+    "access_token": "75170fc230cd88f32e475ff4087f81d9",
+    "expires_in": 14074,
+    "refresh_token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "scope": ["chat:edit", "chat:read"],
+    "token_type": "bearer"
+  },
+  "user": {
+    "id": "98776633",
+    "login": "doceazedo911",
+    "display_name": "DoceAzedo911",
+    "type": "",
+    "broadcaster_type": "affiliate",
+    "description": "Oie, pode me chamar de Doce! 👋 Eu sou dev frontend e streamer 🌈 Minhas lives são principalmente de programação e produtividade.",
+    "profile_image_url": "https://static-cdn.jtvnw.net/jtv_user_pictures/8c4f07f6-12dc-4053-a082-6abdc27ecaab-profile_image-300x300.png",
+    "offline_image_url": "https://static-cdn.jtvnw.net/jtv_user_pictures/cf593e0f-b177-4e6a-abbb-00c2f69dd918-channel_offline_image-1920x1080.png",
+    "view_count": 0,
+    "created_at": "2015-08-10T00:38:54Z"
+  }
 }
 ```
 
