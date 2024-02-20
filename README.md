@@ -191,6 +191,26 @@ Retrieve access token, refresh token and user data for an authorization code
 }
 ```
 
+### `/users/[channelIdOrName]`
+
+Retrieve user data
+
+**Example:** https://unttv.vercel.app/users/doceazedo911
+
+```json
+{
+  "id": "98776633",
+  "name": "doceazedo911",
+  "displayName": "DoceAzedo911",
+  "type": "",
+  "broadcasterType": "affiliate",
+  "description": "Oie, pode me chamar de Doce! 👋 Eu sou dev frontend e streamer 🌈 Minhas lives são principalmente de programação e produtividade.",
+  "profilePictureUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/8c4f07f6-12dc-4053-a082-6abdc27ecaab-profile_image-300x300.png",
+  "offlinePlaceholderUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/cf593e0f-b177-4e6a-abbb-00c2f69dd918-channel_offline_image-1920x1080.png",
+  "creationDate": "2015-08-10T00:38:54Z"
+}
+```
+
 ## License
 
 The UNTTV project is licensed under the [GPLv3 License](./LICENSE).
