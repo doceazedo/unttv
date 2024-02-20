@@ -15,13 +15,12 @@ export const formatBadgesResponse = (badges: HelixChatBadgeSet[]) =>
     })),
   }));
 
-const EMPTY_RESPONSE = new Response(JSON.stringify(null), {
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-
-export const cachedEmptyResponse = async (path: string) => {
+export const cachedEmptyResponse = async (path: string, status = 200) => {
   cache(path, "", 60);
-  return EMPTY_RESPONSE;
+  return new Response(JSON.stringify(null), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 };

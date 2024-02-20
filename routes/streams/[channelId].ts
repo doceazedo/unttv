@@ -1,19 +1,7 @@
 export default eventHandler(async ({ context, path }) => {
-  const { channelId } = context.params;
-
-  let userId: string;
-  let userName: string;
-
-  if (isNaN(parseInt(channelId))) {
-    userName = channelId;
-  } else {
-    userId = channelId;
-  }
-
-  const streams = await twurple.streams.getStreams({
-    userId,
-    userName,
-  });
+  const streams = await twurple.streams.getStreams(
+    getIdOrLogin(context.params.channelId)
+  );
   if (!streams.data.length) return cachedEmptyResponse(path);
 
   const stream = streams.data[0];
