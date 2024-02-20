@@ -171,23 +171,22 @@ Retrieve access token, refresh token and user data for an authorization code
 ```json
 {
   "token": {
-    "access_token": "75170fc230cd88f32e475ff4087f81d9",
-    "expires_in": 14074,
-    "refresh_token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "accessToken": "75170fc230cd88f32e475ff4087f81d9",
+    "expiresIn": 14074,
+    "refreshToken": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "scope": ["chat:edit", "chat:read"],
-    "token_type": "bearer"
+    "tokenType": "bearer"
   },
   "user": {
     "id": "98776633",
-    "login": "doceazedo911",
-    "display_name": "DoceAzedo911",
+    "name": "doceazedo911",
+    "displayName": "DoceAzedo911",
     "type": "",
-    "broadcaster_type": "affiliate",
+    "broadcasterType": "affiliate",
     "description": "Oie, pode me chamar de Doce! 👋 Eu sou dev frontend e streamer 🌈 Minhas lives são principalmente de programação e produtividade.",
-    "profile_image_url": "https://static-cdn.jtvnw.net/jtv_user_pictures/8c4f07f6-12dc-4053-a082-6abdc27ecaab-profile_image-300x300.png",
-    "offline_image_url": "https://static-cdn.jtvnw.net/jtv_user_pictures/cf593e0f-b177-4e6a-abbb-00c2f69dd918-channel_offline_image-1920x1080.png",
-    "view_count": 0,
-    "created_at": "2015-08-10T00:38:54Z"
+    "profilePictureUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/8c4f07f6-12dc-4053-a082-6abdc27ecaab-profile_image-300x300.png",
+    "offlinePlaceholderUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/cf593e0f-b177-4e6a-abbb-00c2f69dd918-channel_offline_image-1920x1080.png",
+    "creationDate": "2015-08-10T00:38:54Z"
   }
 }
 ```

@@ -32,8 +32,24 @@ export default eventHandler(async ({ context, path }) => {
     if (!user) throw Error("Could not fetch user data");
 
     return {
-      token,
-      user,
+      token: {
+        accessToken: token.access_token,
+        expiresIn: token.expires_in,
+        refreshToken: token.refresh_token,
+        scope: token.scope,
+        tokenType: token.token_type,
+      },
+      user: {
+        id: user.id,
+        name: user.login,
+        displayName: user.display_name,
+        type: user.type,
+        broadcasterType: user.broadcaster_type,
+        description: user.description,
+        profilePictureUrl: user.profile_image_url,
+        offlinePlaceholderUrl: user.offline_image_url,
+        creationDate: user.created_at,
+      },
     };
   } catch (error) {
     return new Response(
