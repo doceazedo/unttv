@@ -211,6 +211,14 @@ Retrieve user data
 }
 ```
 
+### `/users/[channelIdOrName]/avatar.png`
+
+Retrieve the user's avatar
+
+**Example:** https://unttv.vercel.app/users/doceazedo911/avatar.png
+
+<img src="https://static-cdn.jtvnw.net/jtv_user_pictures/8c4f07f6-12dc-4053-a082-6abdc27ecaab-profile_image-300x300.png" height="64" />
+
 ## License
 
 The UNTTV project is licensed under the [GPLv3 License](./LICENSE).
