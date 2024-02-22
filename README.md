@@ -166,7 +166,7 @@ Retrieve access token, refresh token and user data for an authorization code
 **Example:** https://unttv.vercel.app/oauth2/token/dac9630aec642a428cd73f4be0a03569
 
 > [!NOTE]
-> Your authorization flow must use the Client ID `bu3ulf6jfnimlrdinskr5nqkbh8uz7` so we can exchange the tokens.
+> Your authorization flow must use the Client ID `47jbw9amoncjey0t854ik6zf7q7c1b` so we can exchange the tokens.
 
 ```json
 {
